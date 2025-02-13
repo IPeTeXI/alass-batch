@@ -23,7 +23,7 @@ def main():
     for video_file in video_files:
         for subtitle_file in subtitle_files:
             if (video_file[:-4]) in subtitle_file:
-                process = subprocess.Popen(os.getcwd() +'/alass-linux64 "' + video_file + '" "' + subtitle_file + '" "' + subtitle_file + '"', shell=True)
+                process = subprocess.Popen('alass-cli "' + video_file + '" "' + subtitle_file + '" "' + subtitle_file + '"', shell=True)
                 print(process.wait())
                 
                 
